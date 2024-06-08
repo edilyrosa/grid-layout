@@ -10,7 +10,17 @@
             font-size: 20px;
             line-height: 1.5;
             text-align: justify;
-            margin: 10px;
+            margin: 40px;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            }
+            
+            span{
+            font-size: 12px;
+
         }
         .container {
             display: grid;
@@ -31,6 +41,10 @@
             height: 5vh;
             margin: 10px;
             margin-top: 50px;
+            margin-left: 5%;
+            background: rgb(216, 199, 209);
+            font-weight: bold;
+            font-size: 1rem;
         }
         input[type='submit'],
         input[type='reset']{
@@ -38,7 +52,7 @@
         }
     </style>
 </head>
-<body>
+<mack>
     <h1>GRID LAYOUT</h1>
     <div>
         <p>
@@ -57,14 +71,14 @@
         <div class="item">Item 5</div>
         <div class="item">Item 6</div>
     </div>
+
+    <mark><span>Considere que el los <b>items</b> tiene padding:20px, y la <b>Cuadrícula Container</b> tiene padding: 10px y  gap: 10px, todo cuenta, al establecer los items.</span></mack>
     <form>
         <input id="column" type="text" placeholder="Escribe las columnas y su ancho">
         <input id="row" type="text" placeholder="Escribe las filas y su alto">
         <br/>
-        <mark>Considere que el los <bb>items</bb> tiene padding:20px, y la <b>Cuadrícula Container</b> tiene padding: 10px y  gap: 10px, todo cuenta</mark>
         <input type="submit" value="Aplicar">
         <input type="reset" value="Limpiar">
-        <
     </form>
         <p>
             Para serlo, el componente <b>Cuadrícula Container</b>, debe poseer las siguientes propiedades:<br/>
