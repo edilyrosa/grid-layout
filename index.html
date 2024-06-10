@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contactos.html">Contactos</a>
+        </nav>
+        <div class="sidebar">
+            <h2>Índice</h2>
+            <ul>
+                <li><a href="#intro">Introducción a CSS Grid</a></li>
+                <li><a href="#structure">Estructura de una página con Grid</a></li>
+                <li><a href="#exercise">Practiquemos CSS grid!</a></li>
+                <li><a href="#navbar">Crear una Nav Bar con CSS</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1 id="intro">Introducción a CSS Grid</h1>
+            <p>CSS Grid Layout es un sistema de diseño bidimensional que te permite crear complejos diseños web fácilmente. Usando grid, puedes organizar los elementos en filas y columnas.</p>
+            
+            <h1 id="structure">Estructura de una página con Grid</h1>
+            <p>Para estructurar una página con CSS Grid, se utiliza la propiedad `display: grid;` en un contenedor y se definen las áreas con `grid-template-areas`, `grid-template-columns` y `grid-template-rows`.</p>
+            
+            <img src="./assets/grid-1.jpg" alt="img de codigo de grid">
+            <br/>
+
+            <div>
+                <p>
+                    Entonces, con la propiedad CSS <b>display: grid;</b> el elemento se convierte en una 
+                    cuadrícula contenedora de TODOS sus elementos hijos, llamados <b>Item.</b>
+                    A la cuadrícula se le especifica el tamaño y la cantidad de columnas 
+                    y filas que quieres en tu diseño, para organizar a sus hijos items. 
+                </p>
+        
+            </div>
+            
+            <p>
+                Para serlo, el componente <b>Cuadrícula Container</b>, debe poseer las siguientes propiedades:<br/>
+            </p>
+            <p>
+                La propiedad CSS <b>display: grid;</b> lo convierte en container grid, de TODOS sus hijos anidados.
+            </p>
+           
+    
+            <p>
+                La propiedad CSS <b>grid-template-columns</b> define el número de columnas en la cuadrícula y su ancho.
+                <pre>
+                    <code>
+                        .container {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-columns: 100px 200px;
+                            grid-template-columns: 33.3% 33.3% 33.3%;
+                            grid-template-columns: 50% 45%;
+                            grid-template-columns: 100px 1fr 2fr;
+                        }
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                <b>grid-template-columns: repeat(2, 1fr);</b> Esta función crea 2 columnas, y cada columna tendrá un tamaño igual usando la fracción 1fr. Donde, <b>1fr</b> Representa una fracción del espacio disponible. <br/>
+                Si tienes repeat(2, 1fr), significa que las dos columnas se dividirán el espacio igualmente.<br/>
+                <b>grid-template-columns: 100px 200px;</b> Esto crea una cuadrícula con dos columnas: la primera de 100px de ancho y la segunda de 200px. px, em, rem: Puedes usar unidades de longitud fija.<br/>
+                <b>grid-template-columns: 30% 30% 20%;</b> Esto crea tres columnas que ocupan su respectivo % del ancho TOTAL del contenedor, considerar el espacio del <b>GAP</b>.<br/>
+                <b>grid-template-columns: 100px 1fr 2fr;</b> Esto crea una cuadrícula con tres columnas: la primera de 100px, la segunda ocupa una fracción del espacio disponible y la tercera ocupa dos fracciones del espacio disponible.<br/>
+            </p>
+            
+            <p>
+                La propiedad CSS <b>grid-template-rows</b> define el número de filas en la cuadrícula y su altura.Funciona de manera similar a grid-template-columns.
+                <pre>
+                    <code>
+                        .container {
+                            display: grid;
+                            grid-template-rows: repeat(3, 1fr);
+                            grid-template-rows: 100px 200px;
+                            grid-template-rows: 50% 50%;
+                            grid-template-rows: 100px 1fr 2fr;
+    
+                            Combinacion:
+                            grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+                            grid-template-rows: 100px 200px 1fr; /* Tres filas de diferentes alturas */
+                
+                        }
+                    </code>
+                </pre>
+            </p>
+    
+            <p>
+                La propiedad CSS <b>gap</b> define el espacio entre las filas y columnas.<br/>
+                La propiedad CSS <b>background-color</b> define el color de fondo.<br/>
+                La propiedad CSS <b>padding</b> define el espacio entre el borde y el contenido.
+            </p>
+    
+            <h1 id="exercise">Practiquemos con las propiedades CSS grid!</h1>
+            <div class="container-eg">
+                <div class="item-eg">Item 1</div>
+                <div class="item-eg">Item 2</div>
+                <div class="item-eg">Item 3</div>
+                <div class="item-eg">Item 4</div>
+                <div class="item-eg">Item 5</div>
+                <div class="item-eg">Item 6</div>
+            </div>
+        
+            <mark><span>Considere que el los <b>items</b> tiene padding:20px, y la <b>Cuadrícula Container</b> tiene padding: 10px y  gap: 10px, todo cuenta, al establecer los items.</span></mark>
+            <form>
+                <input id="column" type="text" placeholder="Escribe las columnas y su ancho">
+                <input id="row" type="text" placeholder="Escribe las filas y su alto">
+                <br/>
+                <input type="submit" value="Aplicar">
+                <input type="reset" value="Limpiar">
+            </form>
+
+
+
+
+            <h1 id="navbar">Crear una Nav Bar con CSS</h1>
+            <p>Para crear una barra de navegación con CSS, puedes usar propiedades como `background-color`, `padding` y `text-align`. También puedes hacerla fija usando `position: sticky;` y `top: 0;`.</p>
+        </div>
+        <footer>
+            <p>Todos los derechos reservados.</p>
+            <p>Equipo: Mora, Mora, Montenegro y Amaya</p>
+            
+        </footer>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container-eg')
+        const form = document.querySelector('form')
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const column = document.querySelector('#column')
+            const row = document.querySelector('#row')
+            console.log(column.value, row.value);
+            container.style.gridTemplateColumns = column.value
+            container.style.gridTemplateRows = row.value
+            console.log(column.value, row.value);
+        })
+       
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: .6fr 2.4fr;
+     grid-template-areas: /*definiendo un nombre de área que puede repetirse para abarcar varias celdas del grid */
+    'nav nav' /*El área se extiende, ocupando dos celdas. */
+    'sidebar content'
+    'footer footer';
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+    
+    nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    background-color:  rgba(216, 199, 209, 0.763);;
+    padding: 15px;
+}
+
+.sidebar a{
+    font-size: 12px;
+}
+
+.content {
+    grid-area: content;
+    padding: 15px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+nav a.active {
+    color:  rgb(216, 199, 209);;
+    font-weight: bold;
+}
+
+
+/* MIOS */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    /* margin: 40px; */
+    }
+    
+    p, img {
+    line-height: 1.5;
+     margin: 40px; 
+     max-width: 90vw;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    }
+    
+    span{
+    font-size: 12px;
+
+}
+.container-eg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;   
+    background: rgb(250,250,250);
+    background: radial-gradient(circle, rgba(250,250,250,1) 0%, rgba(0,0,0,1) 51%, rgba(24,4,22,0.7484243697478992) 100%);
+    padding: 10px;
+    max-width: 85vw;
+}
+.item-eg {
+    background-color: rgb(216, 199, 209);
+    padding: 20px;
+    text-align: center;
+}
+input{
+    width: 20vw;
+    height: 5vh;
+    margin: 10px;
+    margin-top: 50px;
+    margin-left: 5%;
+    background: rgb(216, 199, 209);
+    font-weight: bold;
+    font-size: 1rem;
+}
+input[type='submit'],
+input[type='reset']{
+    margin: 5px 25%;
+}
