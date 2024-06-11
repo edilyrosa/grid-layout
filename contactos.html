@@ -23,13 +23,44 @@
         </div>
         <div class="content">
             <h1 id="ubicacion">Nuestra Ubicación</h1>
-            <p>Estamos ubicados en la calle principal...</p>
-            
+            <p>Estamos ubicados en la calle principal del distrito tecnológico de la ciudad, en el edificio Tech Tower, oficina 405. Nuestra ubicación central nos permite estar cerca de nuestros clientes y colaboradores, facilitando reuniones y eventos. Además, estamos bien conectados con varias líneas de transporte público, lo que hace que sea fácil llegar a nuestras oficinas.</p>
+        
             <h1 id="horarios">Horarios de Atención</h1>
-            <p>Nuestro horario de atención es de lunes a viernes...</p>
-            
+            <p>Nuestro horario de atención es de lunes a viernes, de 9:00 AM a 6:00 PM. Durante estos horarios, nuestro equipo está disponible para atender consultas, ofrecer soporte técnico y realizar reuniones presenciales o virtuales. Fuera de estos horarios, puedes enviarnos un correo electrónico y te responderemos a la brevedad posible. También ofrecemos soporte técnico urgente los fines de semana bajo solicitud previa.</p>
+        
             <h1 id="formularios">Formularios de Contacto</h1>
-            <p>Por favor, llena el formulario para contactarnos...</p>
+            <p>Por favor, llena el formulario para contactarnos: </p>
+
+            <div class="contact-form">
+                <h2>Contacto</h2>
+                <form action="#" method="post">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" required>
+        
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <label for="query-type">Tipo de Consulta</label>
+                    <select id="query-type" name="query-type" required>
+                        <option value="services">Servicios</option>
+                        <option value="support">Soporte Técnico</option>
+                        <option value="courses">Cursos y Tutoriales</option>
+                        <option value="other">Otros</option>
+                    </select>
+        
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+
+
+
         </div>
         <footer>
             <p>Todos los derechos reservados</p>
