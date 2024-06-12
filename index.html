@@ -15,12 +15,15 @@
         </nav>
         <div class="sidebar">
             <h2>Índice</h2>
+            <nav class = "index">
             <ul>
                 <li><a href="#intro">Introducción a CSS Grid</a></li>
                 <li><a href="#structure">Estructura de una página con Grid</a></li>
                 <li><a href="#exercise">Practiquemos CSS grid!</a></li>
                 <li><a href="#navbar">Crear una Nav Bar con CSS</a></li>
+                <li><a href="#navbarExample">Ejemplo de Nav Bar con CSS</a></li>
             </ul>
+            </nav>
         </div>
         <div class="content">
             <h1 id="intro" style="font-size:4rem;">Introducción a CSS Grid y Nav Bar</h1>
@@ -121,9 +124,67 @@
 
 
 
-
             <h1 id="navbar">Crear una Nav Bar con CSS</h1>
-            <p>Para crear una barra de navegación con CSS, puedes usar propiedades como `background-color`, `padding` y `text-align`. También puedes hacerla fija usando `position: sticky;` y `top: 0;`.</p>
+            <p>Una barra de navegación (navbar) es un componente crucial de cualquier sitio web. Facilita la navegación del usuario entre diferentes secciones del sitio. Para crear una barra de navegación con CSS, puedes usar propiedades como `background-color`, `padding` y `text-align`. También puedes hacerla fija usando `position: sticky;` y `top: 0;`.</p>
+
+            <p>Primero, necesitamos crear la estructura HTML básica de nuestra navbar. Aquí tienes un ejemplo sencillo:</p>
+            <pre><code>
+            &lt;nav&gt;
+            &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#services"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;Sobre Nosotros&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/nav&gt;
+            </code></pre>
+
+            <h1 id = "navbarExample">Estilos CSS para la Navbar</h1>
+            <p>A continuación, aplicamos algunos estilos básicos con CSS para darle diseño a nuestra navbar:</p>
+            <pre><code>
+            nav {
+            background-color: #333;
+            padding: 10px;
+            }
+            nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            }
+            nav ul li {
+            margin: 0;
+            }
+            nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: block;
+            }
+            nav ul li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+            }
+            </code></pre>
+        
+            <h1>Responsive Design</h1>
+            <p>Para hacer que nuestra navbar sea responsive, podemos utilizar media queries para ajustar su diseño en dispositivos móviles:</p>
+            <pre><code>
+            @media (max-width: 600px) {
+            nav ul {
+            flex-direction: column;
+            }
+            nav ul li {
+            text-align: center;
+            padding: 10px 0;
+            }
+            }
+            </code></pre>
+       
+   
+
+
         </div>
         <footer>
             <p>Todos los derechos reservados.</p>
